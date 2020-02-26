@@ -9,8 +9,7 @@ Installation
 This project is leveraging poetry. You should download and install poetry based on the offical `install guide
 <https://python-poetry.org/docs/#introduction>`_ from poetry.
 
-.. codeblock:: bash
-   :linenos:
+.. code-block:: bash
 
    cd working_dir
    git clone https://github.com/LongBeachHXC/pythonRobofriends.git
