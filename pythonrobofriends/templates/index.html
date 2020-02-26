@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://unpkg.com/tachyons/css/tachyons.min.css">
+    <link href="{{ url_for('static', path='/index.css') }}" rel="stylesheet">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type=text/javascript>
+        $(function() {
+            $('.searchBox').on("keyup", function() {
+                var value = $(this).val().toLowerCase();
+                console.log(value)
+                $("#robotsList div").filter(function() {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                })
+            });
+        });
+    </script>
+</head>
+<body class='tc'>
+    <h1 class='f1'>Python RoboFriends</h1>
+    <div class='pa2'>
+        <input
+            class="searchBox pa3 ba b--green bg-lightest-blue"
+            type="search"
+            placeholder="search robots"
+        />
+    </div>
+    <div id="robotsList">
+    {% for robot in robots %}
+        <div id={{robot.name}} class="tc bg-light-green dib br3 pa3 ma2 grow bw2 shadow-5">
+            <img alt="robots" src=https://robohash.org/{{robot.id}}?200x200 />
+            <div>
+                <h2>{{robot.name}}</h2>
+                <p>{{robot.email}}</p>
+            </div>
+        </div>
+    {% endfor %}
+    </div>
+</body>
