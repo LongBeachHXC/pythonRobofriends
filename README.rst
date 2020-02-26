@@ -9,21 +9,21 @@ Installation
 This project is leveraging poetry. You should download and install poetry based on the offical `install guide
 <https://python-poetry.org/docs/#introduction>`_ from poetry.
 
-``
-cd working_dir
-git clone https://github.com/LongBeachHXC/pythonRobofriends.git
-cd pythonRobofriends
-poetry install
-``
+.. codeblock:: bash
+   :lineno:
+
+   cd working_dir
+   git clone https://github.com/LongBeachHXC/pythonRobofriends.git
+   cd pythonRobofriends
+   poetry install
+
 
 Usage
 -----
 
 Once you have the project installed via poetry, activate the server with the following:
 
-``
-poetry run uvicorn main:app
-``
+``poetry run uvicorn main:app``
 
 The server will be active on ``http://127.0.0.1:8000``
 
