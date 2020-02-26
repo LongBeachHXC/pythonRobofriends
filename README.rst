@@ -10,7 +10,7 @@ This project is leveraging poetry. You should download and install poetry based 
 <https://python-poetry.org/docs/#introduction>`_ from poetry.
 
 .. codeblock:: bash
-   :lineno:
+   :linenos:
 
    cd working_dir
    git clone https://github.com/LongBeachHXC/pythonRobofriends.git
